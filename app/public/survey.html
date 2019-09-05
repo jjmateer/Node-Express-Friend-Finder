@@ -1,10 +1,160 @@
 <html lang="en">
-    <head>
-        <meta charset="utf8">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    </head>
-    <body>
-        <h1>Hello World</h1>
-    </body>
+<head>
+    <meta charset="utf8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+
+<body style="text-align:center">
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <h1>Survey Questions</h1>
+            <h3>About You</h3>
+            <form>
+
+                <div class="form-group">
+                    <label for="nameInput">Name (Required)</label>
+                    <input type="name" class="form-control" id="nameInput" aria-describedby="nameHelp"
+                        placeholder="Enter name.">
+                </div>
+                <div class="form-group">
+                    <label for="pictureInput">Picture</label>
+                    <input type="picture" class="form-control" id="pictureInput" placeholder="Link your picture here.">
+                </div>
+                <div class="form-group">
+                    <label for="inputState">Question 1</label>
+                    <p>Your mind is always buzzing with unexplored ideas and plans.</p>
+                    <select id="inputState" class="form-control">
+                        <option selected>Choose...</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="inputState">Question 2</label>
+                    <p>Generally speaking, you rely more on your experience than your imagination.</p>
+                    <select id="inputState" class="form-control">
+                        <option selected>Choose...</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="inputState">Question 3</label>
+                    <p>You find it easy to stay relaxed and focused even when there is some pressure.</p>
+                    <select id="inputState" class="form-control">
+                        <option selected>Choose...</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="inputState">Question 4</label>
+                    <p>You rarely do something just out of sheer curiosity.</p>
+                    <select id="inputState" class="form-control">
+                        <option selected>Choose...</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="inputState">Question 5</label>
+                    <p>People can rarely upset you.</p>
+                    <select id="inputState" class="form-control">
+                        <option selected>Choose...</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="inputState">Question 6</label>
+                    <p>It is often difficult for you to relate to other people’s feelings.</p>
+                    <select id="inputState" class="form-control">
+                        <option selected>Choose...</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="inputState">Question 7</label>
+                    <p>In a discussion, truth should be more important than people’s sensitivities.</p>
+                    <select id="inputState" class="form-control">
+                        <option selected>Choose...</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="inputState">Question 8</label>
+                    <p>You rarely get carried away by fantasies and ideas.</p>
+                    <select id="inputState" class="form-control">
+                        <option selected>Choose...</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="inputState">Question 9</label>
+                    <p>You think that everyone’s views should be respected regardless of whether they are supported by
+                        facts
+                        or
+                        not.</p>
+                    <select id="inputState" class="form-control">
+                        <option selected>Choose...</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="inputState">Question 10</label>
+                    <p>You feel more energetic after spending time with a group of people.</p>
+                    <select id="inputState" class="form-control">
+                        <option selected>Choose...</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <button type="submit" class="btn btn-secondary btn-lg btn-block">Submit</div>
+
+        </div>
+        </form>
+        <div class="col-md-4"></div>
+    </div>
+
+</body>
+
 </html>
