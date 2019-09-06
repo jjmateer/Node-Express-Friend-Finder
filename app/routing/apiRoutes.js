@@ -1,24 +1,11 @@
 
-// app.get("/api/friends/:friend", function (req, res) {
-//     var chosen = req.params.friend;
+'use strict';
 
-//     console.log(chosen);
+var friends = require('../data/friends.js');
+var fs = require('fs')
 
-//     for (var i = 0; i < friends.length; i++) {
-//         if (chosen === friends[i].routeName) {
-//             return res.json(friends[i]);
-//         }
-//     }
-
-//     return res.json(false);
-// });
-
-// app.post("/api/friends", function (req, res) {
-//     var newFriend = req.body;
-
-//     console.log(newFriend);
-
-//     Friends.push(newFriend);
-
-//     res.json(newFriend);
-// });
+module.exports = (app)=>{
+    app.get('/api/friends', (req, res)=>{
+        res.json(friends);
+    });
+}
