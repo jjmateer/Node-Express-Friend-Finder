@@ -1,19 +1,23 @@
 {
-  "name": "friend-express",
+  "name": "express-friend-finder",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
-  "dependencies": {
-    "express": "^4.16.3",
-    "path": "^0.12.7",
-    "routes": "^2.1.0"
-  },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
-    "watch": "nodemon server.js"
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jjmateer/Node-Express-Friend-Finder.git"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jjmateer/Node-Express-Friend-Finder/issues"
+  },
+  "homepage": "https://github.com/jjmateer/Node-Express-Friend-Finder#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
