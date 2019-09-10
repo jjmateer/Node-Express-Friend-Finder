@@ -161,23 +161,25 @@
 </body>
 <script type="text/javascript">
     $("#submitBtn").on("click", function () {
-        var scoreArr = [];
-        scoreArr.push($('#q1').val().trim()),
-            scoreArr.push($('#q2').val().trim()),
-            scoreArr.push($('#q3').val().trim()),
-            scoreArr.push($('#q4').val().trim()),
-            scoreArr.push($('#q5').val().trim()),
-            scoreArr.push($('#q6').val().trim()),
-            scoreArr.push($('#q7').val().trim()),
-            scoreArr.push($('#q8').val().trim()),
-            scoreArr.push($('#q9').val().trim()),
-            scoreArr.push($('#q10').val().trim())
+        var scoreArr = [
+            $('#q1').val().trim(),
+            $('#q2').val().trim(),
+            $('#q3').val().trim(),
+            $('#q4').val().trim(),
+            $('#q5').val().trim(),
+            $('#q6').val().trim(),
+            $('#q7').val().trim(),
+            $('#q8').val().trim(),
+            $('#q9').val().trim(),
+            $('#q10').val().trim()
+        ];
         var getScores = {
-            name: $('#nameQ').val().trim(),
-            picture: $('#pictureQ').val().trim(),
-            score: scoreArr
+            'name': $('#nameQ').val().trim(),
+            'picture': $('#pictureQ').val().trim(),
+            'score': scoreArr
         }
         var currentURL = window.location.origin;
+        console.log(getScores);
         $.post(currentURL + "/api/friends", getScores, function (data) {
             if (data === true) {
                 alert('yes')
@@ -185,11 +187,8 @@
             if (data === false) {
                 alert('no')
             }
-            $('#nameQ').val(""),
-                $('#pictureQ').val(""),
-                $(".form-control").val("")
         });
-        return false;
+        // return false;
     })
 </script>
 
