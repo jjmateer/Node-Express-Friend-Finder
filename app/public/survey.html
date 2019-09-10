@@ -179,7 +179,7 @@
             'score': scoreArr
         }
         var currentURL = window.location.origin;
-        console.log(getScores);
+        // console.log(getScores);
         $.post(currentURL + "/api/friends", getScores, function (data) {
             if (data === true) {
                 alert('yes')
