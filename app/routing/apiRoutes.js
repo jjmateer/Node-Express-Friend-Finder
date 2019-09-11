@@ -14,17 +14,6 @@ module.exports = (app) => {
             friendsData.push(req.body);
             res.json(false);
         }
-        // console.log(req.body.score)
-        // function getArrTotals() {
-
-        //     const reducer = (accumulator, currentValue) => accumulator + currentValue;
-        //     for (var i = 0; i < friendsData.length; i++) {
-        //         console.log(parseInt(req.body.score))
-
-        //         // console.log(parseInt(friendsData[i].score))
-        //     }
-
-        // }
         function getSmallestDiff() {
             const reducer = (accumulator, currentValue) => accumulator + currentValue;
             var totalsArr = [];
@@ -37,38 +26,11 @@ module.exports = (app) => {
                     total += parseInt(diff[j])
                 }
                 totalsArr.push(total)
-                totalsArr.sort(function (a, b) { return a - b });
-                buildCompareTotals()
             }
-            // console.log(lowestNum)
-            var lowestNum = totalsArr[1]
-            if (parseInt(req.body.score.reduce(reducer)) === lowestNum) {
-                console.log('yes')
-            }
-            function buildCompareTotals() {
-                const reducer = (accumulator, currentValue) => accumulator + currentValue;
-                isComplete++;
-                compareArr.push(parseInt(friendsData[i].score))
-                if (isComplete === friendsData.length) {
-                    // compareTotals()
-                    console.log(compareArr.reduce(reducer))
-                }
-            }
-            function compareTotals() {
-                const reducer = (accumulator, currentValue) => accumulator + currentValue;
-                console.log(friendsData.score)
-                var totalCompare = friendsData.score.reduce(reducer)
-                for (var i = 0; i < friendsData.length; i++) {
-                    console.log(totalCompare)
-                }
-
-            }
-
-
-
-            
+            var sortedArr = totalsArr.sort(function (a, b) { return a - b });
+            var lowestNum = sortedArr[1]
+            var numIndex = totalsArr.indexOf(lowestNum);
+            console.log(friendsData[numIndex])
         }
-
     })
-    // console.log(friendsData[i].score)
 }
