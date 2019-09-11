@@ -151,6 +151,7 @@
                 </div>
                 <div class="col-md-4">
                     <button type="submit" id="submitBtn" class="btn btn-secondary btn-lg btn-block">Submit</div>
+                <div id="results" style="height:100px;"></div>
                 <a type="button" href="/api/friends" class="btn btn-secondary btn-lg btn-block">friends</a>
         </div>
 
@@ -160,7 +161,8 @@
     </div>
 </body>
 <script type="text/javascript">
-    $("#submitBtn").on("click", function () {
+    $("#submitBtn").on("click", function (event) {
+        event.preventDefault()
         var scoreArr = [
             $('#q1').val().trim(),
             $('#q2').val().trim(),
@@ -181,12 +183,8 @@
         var currentURL = window.location.origin;
         // console.log(getScores);
         $.post(currentURL + "/api/friends", getScores, function (data) {
-            if (data === true) {
-                alert('yes')
-            }
-            if (data === false) {
-                alert('no')
-            }
+            $("#results").append("<p> " + data.name + "</p>");
+            $("#results").append(`<img src=${data.picture}> `);
         });
         // return false;
     })
