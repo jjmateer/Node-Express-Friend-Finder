@@ -27,10 +27,12 @@ module.exports = (app) => {
                 }
                 totalsArr.push(total)
             }
-            var sortedArr = totalsArr.sort(function (a, b) { return a - b });
+            var sortedArr = totalsArr.slice().sort(function (a, b) { return a - b });
             var lowestNum = sortedArr[1]
             var numIndex = totalsArr.indexOf(lowestNum);
             console.log(friendsData[numIndex])
+            console.log(sortedArr)
+            console.log(totalsArr)
         }
     })
 }
