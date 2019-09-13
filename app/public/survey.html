@@ -22,7 +22,7 @@
                     <div class="modal-content">
                         <div class="modal-header">
                             <h5 class="modal-title" id="exampleModalLabel">Your Match</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <button type="button" class="close" id="closeBtn" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
@@ -47,7 +47,7 @@
                 </div>
                 <div class="form-group">
                     <label for="inputState">Question 1</label>
-                    <p>Your mind is always buzzing with unexplored ideas and plans.</p>
+                    <p id="questions">Your mind is always buzzing with unexplored ideas and plans.</p>
                     <select name="numQ" id="q1" class="form-control">
                         <option selected>Choose...</option>
                         <option>1</option>
@@ -59,7 +59,7 @@
                 </div>
                 <div class="form-group">
                     <label for="inputState">Question 2</label>
-                    <p>Generally speaking, you rely more on your experience than your imagination.</p>
+                    <p id="questions">Generally speaking, you rely more on your experience than your imagination.</p>
                     <select name="numQ" id="q2" class="form-control">
                         <option selected>Choose...</option>
                         <option>1</option>
@@ -71,7 +71,7 @@
                 </div>
                 <div class="form-group">
                     <label for="inputState">Question 3</label>
-                    <p>You find it easy to stay relaxed and focused even when there is some pressure.</p>
+                    <p id="questions">You find it easy to stay relaxed and focused even when there is some pressure.</p>
                     <select name="numQ" id="q3" class="form-control">
                         <option selected>Choose...</option>
                         <option>1</option>
@@ -83,7 +83,7 @@
                 </div>
                 <div class="form-group">
                     <label for="inputState">Question 4</label>
-                    <p>You rarely do something just out of sheer curiosity.</p>
+                    <p id="questions">You rarely do something just out of sheer curiosity.</p>
                     <select name="numQ" id="q4" class="form-control">
                         <option selected>Choose...</option>
                         <option>1</option>
@@ -95,7 +95,7 @@
                 </div>
                 <div class="form-group">
                     <label for="inputState">Question 5</label>
-                    <p>People can rarely upset you.</p>
+                    <p id="questions">People can rarely upset you.</p>
                     <select name="numQ" id="q5" class="form-control">
                         <option selected>Choose...</option>
                         <option>1</option>
@@ -107,7 +107,7 @@
                 </div>
                 <div class="form-group">
                     <label for="inputState">Question 6</label>
-                    <p>It is often difficult for you to relate to other people’s feelings.</p>
+                    <p id="questions">It is often difficult for you to relate to other people’s feelings.</p>
                     <select name="numQ" id="q6" class="form-control">
                         <option selected>Choose...</option>
                         <option>1</option>
@@ -119,7 +119,7 @@
                 </div>
                 <div class="form-group">
                     <label for="inputState">Question 7</label>
-                    <p>In a discussion, truth should be more important than people’s sensitivities.</p>
+                    <p id="questions">In a discussion, truth should be more important than people’s sensitivities.</p>
                     <select name="numQ" id="q7" class="form-control">
                         <option selected>Choose...</option>
                         <option>1</option>
@@ -131,7 +131,7 @@
                 </div>
                 <div class="form-group">
                     <label for="inputState">Question 8</label>
-                    <p>You rarely get carried away by fantasies and ideas.</p>
+                    <p id="questions">You rarely get carried away by fantasies and ideas.</p>
                     <select name="numQ" id="q8" class="form-control">
                         <option selected>Choose...</option>
                         <option>1</option>
@@ -143,7 +143,7 @@
                 </div>
                 <div class="form-group">
                     <label for="inputState">Question 9</label>
-                    <p>You think that everyone’s views should be respected regardless of whether they are supported by
+                    <p id="questions">You think that everyone’s views should be respected regardless of whether they are supported by
                         facts
                         or
                         not.</p>
@@ -158,7 +158,7 @@
                 </div>
                 <div class="form-group">
                     <label for="inputState">Question 10</label>
-                    <p>You feel more energetic after spending time with a group of people.</p>
+                    <p id="questions">You feel more energetic after spending time with a group of people.</p>
                     <select name="numQ" id="q10" class="form-control">
                         <option selected>Choose...</option>
                         <option>1</option>
@@ -205,11 +205,20 @@
         }
         var currentURL = window.location.origin;
         $.post(currentURL + "/api/friends", getScores, function (data) {
-            $("#modalContent").append("<p style='font-size:40px;'>" + data.name + "<p>");
-            $("#modalContent").append(`<img style="height:250px;width:250px;" src=${data.picture}> `);
+            $("#modalContent").html(`<p style="font-size:40px;"> ${data.name} <p> <br> <img style="height:250px;width:250px;" src=${data.picture}> `);
 
         });
     })
+    $("#closeBtn").on("click", function() {
+        $("#modalContent").empty();
+    })
 </script>
-
+<style>
+#questions{
+    font-size:20px;
+}
+label{
+    font-size:30px;
+}
+</style>
 </html>
