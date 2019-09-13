@@ -1,4 +1,3 @@
-
 var friendsArray = [
     { name: "Vladimir Putin", picture: "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iR0u6DVJweJo/v1/-1x-1.jpg", score: ["5", "1", "4", "4", "5", "1", "2", "5", "4", "1"] },
     { name: "Kim jong un", picture: "https://lh3.googleusercontent.com/tsx_vE5nVmshr-jjxLcoFPM59apY64f6OHNe2kA0wB4CF10BwdHAeHpEje_ZAvfV3EUgncesHntnITa5VcAHL8eq3cbCFow=s1200", score: ["4", "2", "5", "1", "3", "2", "2", "1", "3", "2"] },
