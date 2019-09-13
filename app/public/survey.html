@@ -1,8 +1,6 @@
 <html lang="en">
-
 <head>
-    <meta charset="utf8">
-    <script src="https://code.jquery.com/jquery-3.4.1.js"
+    <meta charset="utf8"><script src="https://code.jquery.com/jquery-3.4.1.js"
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
@@ -10,20 +8,18 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/d3js/5.9.7/d3.min.js"></script>
-</head>
-
-<body style="text-align:center;">
+</head><body style="text-align:center;">
     <div class="row">
         <div class="col-md-4"></div>
         <div class="col-md-4" style="background-color:lightgray;">
-            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            <div class="modal fade" id="matchModal" tabindex="-1" role="dialog" aria-labelledby="matchModalLabel"
                 aria-hidden="true">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Your Match</h5>
-                            <button type="button" class="close" id="closeBtn" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
+                            <h5 class="modal-title" id="matchModalLabel">Your Match</h5>
+                    <button type="button" class="close" id="closeBtn" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
                         <div id="modalContent" class="modal-body">
@@ -38,17 +34,18 @@
             <form>
                 <div class="form-group">
                     <label for="nameInput">Name (Required)</label>
-                    <input type="name" class="form-control" id="nameQ" aria-describedby="nameHelp"
+                    <input type="name" class="form-control" required="true" id="nameQ" aria-describedby="nameHelp"
                         placeholder="Enter name.">
                 </div>
                 <div class="form-group">
                     <label for="pictureInput">Picture</label>
-                    <input type="pictureQ" class="form-control" id="pictureQ" placeholder="Link your picture here.">
+                    <input type="pictureQ" class="form-control" required="true" id="pictureQ"
+                        placeholder="Link your picture here.">
                 </div>
                 <div class="form-group">
                     <label for="inputState">Question 1</label>
                     <p id="questions">Your mind is always buzzing with unexplored ideas and plans.</p>
-                    <select name="numQ" id="q1" class="form-control">
+                    <select name="numQ" id="q1" class="form-control" required="true">
                         <option selected>Choose...</option>
                         <option>1</option>
                         <option>2</option>
@@ -60,7 +57,7 @@
                 <div class="form-group">
                     <label for="inputState">Question 2</label>
                     <p id="questions">Generally speaking, you rely more on your experience than your imagination.</p>
-                    <select name="numQ" id="q2" class="form-control">
+                    <select name="numQ" id="q2" class="form-control" required="true">
                         <option selected>Choose...</option>
                         <option>1</option>
                         <option>2</option>
@@ -72,7 +69,7 @@
                 <div class="form-group">
                     <label for="inputState">Question 3</label>
                     <p id="questions">You find it easy to stay relaxed and focused even when there is some pressure.</p>
-                    <select name="numQ" id="q3" class="form-control">
+                    <select name="numQ" id="q3" class="form-control" required="true">
                         <option selected>Choose...</option>
                         <option>1</option>
                         <option>2</option>
@@ -84,7 +81,7 @@
                 <div class="form-group">
                     <label for="inputState">Question 4</label>
                     <p id="questions">You rarely do something just out of sheer curiosity.</p>
-                    <select name="numQ" id="q4" class="form-control">
+                    <select name="numQ" id="q4" class="form-control" required="true">
                         <option selected>Choose...</option>
                         <option>1</option>
                         <option>2</option>
@@ -96,7 +93,7 @@
                 <div class="form-group">
                     <label for="inputState">Question 5</label>
                     <p id="questions">People can rarely upset you.</p>
-                    <select name="numQ" id="q5" class="form-control">
+                    <select name="numQ" id="q5" class="form-control" required="true">
                         <option selected>Choose...</option>
                         <option>1</option>
                         <option>2</option>
@@ -108,7 +105,7 @@
                 <div class="form-group">
                     <label for="inputState">Question 6</label>
                     <p id="questions">It is often difficult for you to relate to other people’s feelings.</p>
-                    <select name="numQ" id="q6" class="form-control">
+                    <select name="numQ" id="q6" class="form-control" required="true">
                         <option selected>Choose...</option>
                         <option>1</option>
                         <option>2</option>
@@ -120,7 +117,7 @@
                 <div class="form-group">
                     <label for="inputState">Question 7</label>
                     <p id="questions">In a discussion, truth should be more important than people’s sensitivities.</p>
-                    <select name="numQ" id="q7" class="form-control">
+                    <select name="numQ" id="q7" class="form-control" required="true">
                         <option selected>Choose...</option>
                         <option>1</option>
                         <option>2</option>
@@ -132,7 +129,7 @@
                 <div class="form-group">
                     <label for="inputState">Question 8</label>
                     <p id="questions">You rarely get carried away by fantasies and ideas.</p>
-                    <select name="numQ" id="q8" class="form-control">
+                    <select name="numQ" id="q8" class="form-control" required="true">
                         <option selected>Choose...</option>
                         <option>1</option>
                         <option>2</option>
@@ -143,11 +140,9 @@
                 </div>
                 <div class="form-group">
                     <label for="inputState">Question 9</label>
-                    <p id="questions">You think that everyone’s views should be respected regardless of whether they are supported by
-                        facts
-                        or
-                        not.</p>
-                    <select name="numQ" id="q9" class="form-control">
+                    <p id="questions">You think that everyone’s views should be respected regardless of whether they are
+                        supported by facts or not.</p>
+                    <select name="numQ" id="q9" class="form-control" required="true">
                         <option selected>Choose...</option>
                         <option>1</option>
                         <option>2</option>
@@ -159,7 +154,7 @@
                 <div class="form-group">
                     <label for="inputState">Question 10</label>
                     <p id="questions">You feel more energetic after spending time with a group of people.</p>
-                    <select name="numQ" id="q10" class="form-control">
+                    <select name="numQ" id="q10" class="form-control" required="true">
                         <option selected>Choose...</option>
                         <option>1</option>
                         <option>2</option>
@@ -168,14 +163,13 @@
                         <option>5</option>
                     </select>
                 </div>
-                <button type="submit" id="submitBtn" class="btn btn-secondary btn-lg btn-block" data-toggle="modal"
-                    data-target="#exampleModal">Submit</button>
-
+                <button type="submit" id="submitBtn" class="btn btn-secondary btn-lg btn-block"
+                    data-target="#matchModal">Submit</button>
         </div>
     </div>
     </form>
     <div class="container" style="height:30px;width:260px;">
-        <a href="/api/friends" style="color:black;">Friends List</a> | 
+        <a href="/api/friends" style="color:black;">Friends List</a> |
         <a href="https://github.com/jjmateer/Node-Express-Friend-Finder" style="color:black;">Github
             Repository
         </a>
@@ -186,36 +180,42 @@
 <script type="text/javascript">
     $("#submitBtn").on("click", function (event) {
         event.preventDefault()
-        var scoreArr = [
-            $('#q1').val().trim(),
-            $('#q2').val().trim(),
-            $('#q3').val().trim(),
-            $('#q4').val().trim(),
-            $('#q5').val().trim(),
-            $('#q6').val().trim(),
-            $('#q7').val().trim(),
-            $('#q8').val().trim(),
-            $('#q9').val().trim(),
-            $('#q10').val().trim()
-        ];
-        var getScores = {
-            'name': $('#nameQ').val().trim(),
-            'picture': $('#pictureQ').val().trim(),
-            'score': scoreArr
+        if ($(".form-control").val() < 1) {
+            alert("Please fill out all inputs.")
+            return false;
+        } else {
+            $("#matchModal").modal('toggle');
+            var scoreArr = [
+                $('#q1').val().trim(),
+                $('#q2').val().trim(),
+                $('#q3').val().trim(),
+                $('#q4').val().trim(),
+                $('#q5').val().trim(),
+                $('#q6').val().trim(),
+                $('#q7').val().trim(),
+                $('#q8').val().trim(),
+                $('#q9').val().trim(),
+                $('#q10').val().trim()
+            ];
+            var getScores = {
+                'name': $('#nameQ').val().trim(),
+                'picture': $('#pictureQ').val().trim(),
+                'score': scoreArr
+            }
+            var currentURL = window.location.origin;
+            $.post(currentURL + "/api/friends", getScores, function (data) {
+                $("#modalContent").html(`<p style="font-size:40px;"> ${data.name} <p> <br> <img style="height:250px;width:250px;" src=${data.picture}> `);
+            });
         }
-        var currentURL = window.location.origin;
-        $.post(currentURL + "/api/friends", getScores, function (data) {
-            $("#modalContent").html(`<p style="font-size:40px;"> ${data.name} <p> <br> <img style="height:250px;width:250px;" src=${data.picture}> `);
-
-        });
     })
 </script>
 <style>
-#questions{
-    font-size:20px;
-}
-label{
-    font-size:30px;
-}
+    #questions {
+        font-size: 20px;
+    }
+    label {
+        font-size: 30px;
+    }
 </style>
+
 </html>
