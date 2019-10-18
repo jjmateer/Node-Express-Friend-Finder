@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/d3js/5.9.7/d3.min.js"></script>
-</head><body style="text-align:center;">
+</head><body style="text-align:center;background-image: url(../app/background.jpg);">
+        <title>Your New Friend</title>
     <div class="row">
         <div class="col-md-4"></div>
         <div class="col-md-4" style="background-color:lightgray;">
@@ -25,7 +26,7 @@
                         <div id="modalContent" class="modal-body">
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
                         </div>
                     </div>
                 </div>
@@ -45,7 +46,7 @@
                 </div>
                 <div class="form-group">
                     <label for="inputState">Question 1</label>
-                    <p id="questions">Your mind is always buzzing with unexplored ideas and plans.</p>
+                    <p id="questions">You enjoy long walks on the beach.</p>
                     <select name="numQ" id="q1" class="form-control" required="true">
                         <option selected>Choose...</option>
                         <option>1</option>
@@ -57,7 +58,7 @@
                 </div>
                 <div class="form-group">
                     <label for="inputState">Question 2</label>
-                    <p id="questions">Generally speaking, you rely more on your experience than your imagination.</p>
+                    <p id="questions">Cold weather is better than hot weather.</p>
                     <select name="numQ" id="q2" class="form-control" required="true">
                         <option selected>Choose...</option>
                         <option>1</option>
@@ -69,7 +70,7 @@
                 </div>
                 <div class="form-group">
                     <label for="inputState">Question 3</label>
-                    <p id="questions">You find it easy to stay relaxed and focused even when there is some pressure.</p>
+                    <p id="questions">Pizza is a dish best served cold.</p>
                     <select name="numQ" id="q3" class="form-control" required="true">
                         <option selected>Choose...</option>
                         <option>1</option>
@@ -81,7 +82,7 @@
                 </div>
                 <div class="form-group">
                     <label for="inputState">Question 4</label>
-                    <p id="questions">You rarely do something just out of sheer curiosity.</p>
+                    <p id="questions">You like to meet new people.</p>
                     <select name="numQ" id="q4" class="form-control" required="true">
                         <option selected>Choose...</option>
                         <option>1</option>
@@ -93,7 +94,7 @@
                 </div>
                 <div class="form-group">
                     <label for="inputState">Question 5</label>
-                    <p id="questions">People can rarely upset you.</p>
+                    <p id="questions">Your pasta water should be salty</p>
                     <select name="numQ" id="q5" class="form-control" required="true">
                         <option selected>Choose...</option>
                         <option>1</option>
@@ -105,7 +106,7 @@
                 </div>
                 <div class="form-group">
                     <label for="inputState">Question 6</label>
-                    <p id="questions">It is often difficult for you to relate to other people’s feelings.</p>
+                    <p id="questions">You prefer to drive manual transmission cars over automatic.</p>
                     <select name="numQ" id="q6" class="form-control" required="true">
                         <option selected>Choose...</option>
                         <option>1</option>
@@ -117,7 +118,7 @@
                 </div>
                 <div class="form-group">
                     <label for="inputState">Question 7</label>
-                    <p id="questions">In a discussion, truth should be more important than people’s sensitivities.</p>
+                    <p id="questions">The book always better than the movie.</p>
                     <select name="numQ" id="q7" class="form-control" required="true">
                         <option selected>Choose...</option>
                         <option>1</option>
@@ -129,7 +130,7 @@
                 </div>
                 <div class="form-group">
                     <label for="inputState">Question 8</label>
-                    <p id="questions">You rarely get carried away by fantasies and ideas.</p>
+                    <p id="questions">You daydream a lot.</p>
                     <select name="numQ" id="q8" class="form-control" required="true">
                         <option selected>Choose...</option>
                         <option>1</option>
@@ -141,8 +142,7 @@
                 </div>
                 <div class="form-group">
                     <label for="inputState">Question 9</label>
-                    <p id="questions">You think that everyone’s views should be respected regardless of whether they are
-                        supported by facts or not.</p>
+                    <p id="questions"> Chocolate ice cream is better than strawberry.</p>
                     <select name="numQ" id="q9" class="form-control" required="true">
                         <option selected>Choose...</option>
                         <option>1</option>
@@ -154,7 +154,7 @@
                 </div>
                 <div class="form-group">
                     <label for="inputState">Question 10</label>
-                    <p id="questions">You feel more energetic after spending time with a group of people.</p>
+                    <p id="questions">You love waking up early.</p>
                     <select name="numQ" id="q10" class="form-control" required="true">
                         <option selected>Choose...</option>
                         <option>1</option>
@@ -164,7 +164,7 @@
                         <option>5</option>
                     </select>
                 </div>
-                <button type="submit" id="submitBtn" class="btn btn-secondary btn-lg btn-block"
+                <button type="submit" id="submitBtn" class="btn btn-warning btn-lg btn-block"
                     data-target="#matchModal">Submit</button>
         </div>
     </div>
