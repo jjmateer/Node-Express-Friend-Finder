@@ -8,6 +8,7 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="style.css" type="text/css" />
   </head>
 
   <body>
@@ -22,20 +23,16 @@
             Fill out a quick survey to find your new friend!
           </p>
           <p class="lead">
-            <a class="btn btn-warning btn-lg" href="/survey" role="button"
+            <a class="btn btn-warning btn-lg" style="text-shadow: none;" href="/survey" role="button"
               ><span class="glyphicon glyphicon-list-alt">Go to survey</span></a
             >
           </p>
         </div>
       </div>
     </div>
-    <div class="container" style="height:30px;width:260px;">
-      <a href="/api/friends" style="color:black;">Friends List</a> |
-      <a
-        href="https://github.com/jjmateer/Node-Express-Friend-Finder"
-        style="color:black;"
-        >Github Repository
-      </a>
+    <div class="container">
+      <a class="links" href="/api/friends">Friends List</a> |
+      <a class="links" href="https://github.com/jjmateer/Node-Express-Friend-Finder">Github Repository</a>
     </div>
     <div class="col-md-3"></div>
   </body>

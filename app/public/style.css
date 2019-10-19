@@ -1,0 +1,23 @@
+
+body {
+  text-align: center;
+  background-image: url(/background.jpg);
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-shadow: 2px 2px 8px black;
+  overflow: auto;
+}
+.row {
+  width: 100%;
+}
+.links {
+  color: white;
+}
+.container {
+  height: 30px;
+  width: 260px;
+}
+#surveyForm, .jumbotron {
+  background-color: gray;
+}
