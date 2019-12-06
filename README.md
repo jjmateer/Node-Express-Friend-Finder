@@ -11,3 +11,10 @@ The user will submit their name along with a photo of themselves along with thei
 On submit, the application will check all of the other friends scores, subtract the user's score from the current friend's score, and add the absolute value to the total difference.
 
 The friend with the least total difference will be the users new match.
+
+## Technology used
+
+- HTML5
+- CSS3
+- Express.js
+- Node.js
